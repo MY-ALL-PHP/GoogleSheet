@@ -94,11 +94,29 @@ $values = $response->getValues();
 if (empty($values)) {
     print "No data found.\n";
 } else {
-    print "Name, Major:\n";
-    foreach ($values as $row) {
-        // Print columns A and E, which correspond to indices 0 and 4.
-        printf("%s, %s\n", $row[0], $row[4]);
+    // print "Name, Major:\n";
+    // foreach ($values as $row) {
+    //     // Print columns A and E, which correspond to indices 0 and 4.
+    //     printf("%s, %s\n", $row[0], $row[4]);
+    // }
+    echo '<table border="1">';
+    foreach($values as $index=>$Array){
+        echo '<tr>';
+        foreach($Array as $Index=>$Value){
+            echo '<td>'.$Value.'</td>';
+        }
+        echo '</tr>';
     }
+    echo '</table>';
 }
 // [END sheets_quickstart]
+
+
+
+
+
+
+
+
+
 
